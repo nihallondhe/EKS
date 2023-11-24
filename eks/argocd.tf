@@ -4,6 +4,6 @@ resource "null_resource" "argocd" {
     null_resource.k8s
   ]
   provisioner "local-exec" {
- command= "sudo ./argo.sh"
+ command= "sudo chmod 700 argo.sh | sudo ./argo.sh"
  }
 }
